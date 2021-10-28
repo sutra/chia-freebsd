@@ -1,6 +1,6 @@
---- setup.py.orig	2021-10-01 23:15:12 UTC
+--- setup.py.orig	2021-10-27 02:31:39 UTC
 +++ setup.py
-@@ -1,32 +1,32 @@
+@@ -1,36 +1,36 @@
  from setuptools import setup
  
  dependencies = [
@@ -57,3 +57,8 @@
  ]
  
  upnp_dependencies = [
+-    "miniupnpc==2.2.2",  # Allows users to open ports on their router
++    "miniupnpc>=2.2.2",  # Allows users to open ports on their router
+ ]
+ 
+ dev_dependencies = [
