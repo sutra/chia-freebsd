@@ -1,6 +1,6 @@
---- setup.py.orig	2022-03-15 02:56:36 UTC
+--- setup.py.orig	2022-03-19 05:24:53 UTC
 +++ setup.py
-@@ -1,43 +1,43 @@
+@@ -1,44 +1,44 @@
  from setuptools import setup
  
  dependencies = [
@@ -20,7 +20,8 @@
 -    "colorlog==5.0.1",  # Adds color to logs
 -    "concurrent-log-handler==0.9.19",  # Concurrently log and rotate logs
 -    "cryptography==3.4.7",  # Python cryptography library for TLS - keyring conflict
--    "fasteners==0.16.3",  # For interprocess file locking
+-    "fasteners==0.16.3",  # For interprocess file locking, expected to be replaced by filelock
+-    "filelock==3.4.2",  # For reading and writing config multiprocess and multithread safely  (non-reentrant locks)
 -    "keyring==23.0.1",  # Store keys in MacOS Keychain, Windows Credential Locker
 -    "keyrings.cryptfile==1.3.4",  # Secure storage for keys on Linux (Will be replaced)
 +    "multidict>=5.1.0",  # Avoid 5.2.0 due to Avast
@@ -39,7 +40,8 @@
 +    "colorlog>=5.0.1",  # Adds color to logs
 +    "concurrent-log-handler>=0.9.19",  # Concurrently log and rotate logs
 +    "cryptography>=3.4.7",  # Python cryptography library for TLS - keyring conflict
-+    "fasteners>=0.16.3",  # For interprocess file locking
++    "fasteners>=0.16.3",  # For interprocess file locking, expected to be replaced by filelock
++    "filelock>=3.4.2",  # For reading and writing config multiprocess and multithread safely  (non-reentrant locks)
 +    "keyring>=23.0.1",  # Store keys in MacOS Keychain, Windows Credential Locker
 +    "keyrings.cryptfile>=1.3.4",  # Secure storage for keys on Linux (Will be replaced)
      #  "keyrings.cryptfile==1.3.8",  # Secure storage for keys on Linux (Will be replaced)
