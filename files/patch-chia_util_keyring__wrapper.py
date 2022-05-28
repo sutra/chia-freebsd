@@ -1,4 +1,4 @@
---- chia/util/keyring_wrapper.py.orig	2022-03-15 02:48:42 UTC
+--- chia/util/keyring_wrapper.py.orig	2022-05-26 15:36:01 UTC
 +++ chia/util/keyring_wrapper.py
 @@ -34,9 +34,9 @@ def get_legacy_keyring_instance() -> Optional[LegacyKe
          return MacKeyring()
